@@ -30,6 +30,7 @@ Request posted:
 Status : 200 OK , Response : {"Status":"Success","Message":"Chain code invoke completed successfully","Payload":{"isSuccess":true,"message":"SUCCESS","result":"SUCCESS"},"TimeStamp":"2018-01-06T09:10:37.271Z"}
 ```
 ### Retrival of record using patient aadhar number ( used to see the history)
+
 ```sh
 POST: http://35.185.70.142:4000/api/query
 Request posted:
@@ -45,6 +46,24 @@ Request posted:
 }
 Status : 200 OK , Response : {"Status":"Success","Message":"Chain code query completed successfully","Payload":["[{\"bodyTemp\":\"103\",\"chronicDisease\":[\"Cholera\",\"Cholera\",\"Heart attack\",\"Cholera\"],\"createTs\":\"20180106144026\",\"date\":\"20180106144026\",\"objType\":\"com.hc.mrec\",\"pastMajorDisease\":[\"Tuberculosis\"],\"patientAadharNo\":\"6273-2261-0437\",\"pulseRate\":\"85\",\"recordCreator\":\"HCA1\",\"recordId\":\"7073-1697\",\"status\":\"Open\",\"symptoms\":[\"Fever\"]}]"],"TimeStamp":"2018-01-06T09:10:53.001Z"}
 ```
+### Retrival of record using record id ( Could be used to load the details)
+```sh
+POST: http://35.185.70.142:4000/api/query
+Request posted:
+{
+  "channel": "wbhealthchannel",
+  "org": "wbhealthdept",
+  "ccid": "hcdm",
+  "fn": "retrieveMedicalRecords",
+  "args": [
+    "{\"recordId\":\"8573-3508\",\"type\":\"W_MRECID\"}"
+  ],
+  "invokerRole": "HCA"
+}
+Status : 200 OK , Response : {"Status":"Success","Message":"Chain code query completed successfully","Payload":["[{\"bodyTemp\":\"103\",\"chronicDisease\":[\"Maleria\"],\"createTs\":\"20180106141347\",\"date\":\"20180106141347\",\"diseaseDiagnosed\":[\"Cholera\",\"Heart attack\"],\"doctorResponded\":\"DOCTOR1\",\"medicine\":[\"Fluticason\",\"Fluticason\",\"Acecoflenac\",\"Flagil\",\"Flagil\",\"Paracitamol\"],\"objType\":\"com.hc.mrec\",\"pastMajorDisease\":[\"Tuberculosis\",\"Cholera\",\"Diabetes\",\"Diabetes\"],\"patientAadharNo\":\"0402-0822-4585\",\"pulseRate\":\"100\",\"recordCreator\":\"HCA1\",\"recordId\":\"8573-3508\",\"responseTs\":\"20180106141403\",\"status\":\"Responded\",\"symptoms\":[\"Cold\",\"Fever\",\"Body pain\",\"Body pain\",\"Cold\"]}]"],"TimeStamp":"2018-01-06T14:14:19.048Z"}
+
+```
+
 ### Queue for Health Service Assistant
 ```sh
 POST: http://35.185.70.142:4000/api/query
