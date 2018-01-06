@@ -83,7 +83,7 @@ Status : 200 OK , Response : {"Status":"Success","Message":"Chain code query com
 ### Modify an existing record
 
 ```sh
-POST: http://localhost:4000/api/invoke
+POST:  http://35.185.70.142:4000/api/invoke
 Request posted:
 {
   "channel": "wbhealthchannel",
