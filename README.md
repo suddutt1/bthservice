@@ -4,7 +4,15 @@ Service for Hyperledger Network
 
 ## Mock aadhar data with a given aadhaar number
 ```sh
+GET http://35.185.70.142:4000/aadhaar/aadhaarinfo/7058-8893-0527
+
+Response: 
+{"Status":"Success","Message":"User autheticated successfully","Payload":{"age":73,"alcohol":"N","block":"BUNDWAN","bloodGroup":"B+","createBy":"AUTOGEN","createTs":"2763-936","district":"PURULIA","gender":"M","maritalStatus":"Single","objType":"com.hc.patientinfo","patientAadharNo":"7058-8893-0527","patientFirstName":"Phatik","patientLastName":"Samonto","patientPhoneNumber":"9073662348","smoking":"N","subDivision":"BUNDWAN"},"TimeStamp":"2018-01-06T09:18:43.369Z"}
+
 ```
+#### List valid aadhaar numbers 
+"5533-7072-0206" "5407-4059-1548" "3768-4008-2671" "3612-2350-2126" "7149-7386-0221" "7845-0548-7694" "0178-2247-5028" "4998-8878-1082" "1926-1558-1668" "5535-6297-8989" "4812-8077-0692" "1002-6718-7657" "3281-7213-6676" "4388-1392-1637" "4392-2534-4598" "0290-6406-0256" "6495-7262-0991" "0331-6444-7148" "5214-5734-8631" "4519-9002-9046" "6248-6654-0062" "4923-1192-3368" "1218-7687-0674" "3194-3055-9871" "4247-6917-1125" "8765-2696-7940" "7027-3805-4109" "4056-2833-4007" "8386-0551-2614" "0758-9839-3064" "7058-8893-0527"
+
 ## Insert a medical record by HealthService Assistant
 ```sh
 POST: http://35.185.70.142:4000/api/invoke
