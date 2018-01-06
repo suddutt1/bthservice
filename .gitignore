@@ -60,3 +60,5 @@ typings/
 dist/
 pid.txt
 .vscode/
+./~/
+~/
