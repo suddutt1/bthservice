@@ -1,0 +1,6 @@
+{
+    "wbhealthdept_HCA":"../crypto-config/peerOrganizations/wbhealth.gov.in/users/User1@wbhealth.gov.in",
+    "wbhealthdept_DOCTOR":"../crypto-config/peerOrganizations/wbhealth.gov.in/users/User2@wbhealth.gov.in",
+    "wbhealthdept_ADMIN":"../crypto-config/peerOrganizations/wbhealth.gov.in/users/User3@wbhealth.gov.in"
+}
+

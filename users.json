@@ -1,0 +1,13 @@
+[
+    {"uid":"pnguser1","password":"goat1@bc12345","roles":["PNG_USER"]},
+    {"uid":"dbsuser1","password":"goat2@bc12345","roles":["DBS_USER"]},
+    {"uid":"ffuser1","password":"goat3@bc12345","roles":["EXPIDITOR_USER"]},
+    {"uid":"landuser1","password":"goat4@bc12345","roles":["LC_USER"]},
+    {"uid":"marsekuser1","password":"goat5@bc12345","roles":["MARSEK_USER"]},
+    {"uid":"pnguser2","password":"goat1@bc12345","roles":["PNG_USER"]},
+    {"uid":"dbsuser2","password":"goat2@bc12345","roles":["DBS_USER"]},
+    {"uid":"ffuser2","password":"goat3@bc12345","roles":["EXPIDITOR_USER"]},
+    {"uid":"landuser2","password":"goat4@bc12345","roles":["LC_USER"]},
+    {"uid":"marsekuser2","password":"goat5@bc12345","roles":["MARSEK_USER"]}
+    
+]
