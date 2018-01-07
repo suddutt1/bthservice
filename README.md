@@ -52,6 +52,23 @@ Status: 200 OK, Response
 	"TimeStamp": "2018-01-07T09:04:38.685Z"
 }
 ```
+### Retrival of record using doctor id (This returns the records attended by a doctor)
+```sh
+POST: http://35.185.70.142:4000/api/query
+Request posted:
+{
+  "channel": "wbhealthchannel",
+  "org": "wbhealthdept",
+  "ccid": "hcdm",
+  "fn": "retrieveMedicalRecords",
+  "args": [
+    "{\"doctorResponded\":\"DOCTOR1\",\"type\":\"W_DOCTORID\"}"
+  ],
+  "invokerRole": "DOCTOR"
+}
+Status : 200 OK , Response {"Status":"Success","Message":"Chain code query completed successfully","Payload":["[{\"demographicDetail\":{\"age\":64,\"alcohol\":\"N\",\"block\":\"GARBETA-I\",\"bloodGroup\":\"B+\",\"createBy\":\"AUTOGEN\",\"createTs\":\"20180107143846\",\"district\":\"PASCHIM MEDINIPUR\",\"gender\":\"M\",\"maritalStatus\":\"Single\",\"objType\":\"com.hc.patientinfo\",\"patientAadharNo\":\"2810-2131-5310\",\"patientFirstName\":\"Govindo\",\"patientLastName\":\"Modok\",\"patientPhoneNumber\":\"9959728652\",\"smoking\":\"N\",\"subDivision\":\"GARBETA-I\"},\"medicalRecord\":{\"bloodPressure\":\"100/104\",\"bodyTemp\":\"104\",\"chronicDisease\":[\"Heart attack\"],\"createTs\":\"20180107143846\",\"creatorRole\":\"HC\",\"date\":\"20180107143846\",\"diseaseDiagnosed\":[\"Cholera\",\"Maleria\",\"Diabetes\"],\"doctorResponded\":\"DOCTOR1\",\"medicine\":[\"Omeprazole\",\"Flagil\",\"Tinidazole\",\"Fluticason\"],\"objType\":\"com.hc.mrec\",\"pastMajorDisease\":[\"Cholera\",\"Tuberculosis\",\"Maleria\"],\"patientAadharNo\":\"2810-2131-5310\",\"pulseRate\":\"80\",\"recordCreator\":\"HCA1\",\"recordId\":\"5488-2363\",\"responseTs\":\"20180107143902\",\"status\":\"Responded\",\"sugarLevel\":\"300/470\",\"symptoms\":[\"Fever\",\"Cold\"]}}]"],"TimeStamp":"2018-01-07T09:09:25.636Z"}:
+
+```
 ### Retrival of record using record id ( Could be used to load the details)
 ```sh
 POST: http://35.185.70.142:4000/api/query
